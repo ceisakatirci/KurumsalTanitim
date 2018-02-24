@@ -202,6 +202,16 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\aytac\arkaplan4.jpg" />
+    <Content Include="Content\aytac\aytac1.jpeg" />
+    <Content Include="Content\aytac\aytac2.jpeg" />
+    <Content Include="Content\aytac\aytaclogo.png" />
+    <Content Include="Content\aytac\baby4-logo.png" />
+    <Content Include="Content\aytac\fabrika.jpg" />
+    <Content Include="Content\aytac\infinitilogo.png" />
+    <Content Include="Content\aytac\infiniti_1.jpg" />
+    <Content Include="Content\aytac\turkmali.png" />
+    <Content Include="Content\aytac\WhatsApp Image 2018-02-23 at 23.48.22.jpeg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap\bootstrap.css" />
