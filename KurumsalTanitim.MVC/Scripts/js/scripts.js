@@ -12,8 +12,12 @@ $(document).ready(function(e) {
   var $searchBtn = $('.search-btn');
 	var $searchForm = $('.search-form');
 	var $closeSearch = $('.close-search');
-	var $subscrForm = $('.subscr-form');
-	var $nextField = $('.subscr-next');
+    var $subscrForm = $('.subscr-form');
+    
+    var $nextField = $('.subscr-next');
+    var $subscrSubmit = $('#subscr-submit');
+  
+
 	var $loginBtn = $('.login-btn');
 	var $loginForm = $('.modal .login-form');
 	var $loginForm2 = $('.checkout .login-form');
@@ -46,7 +50,7 @@ $(document).ready(function(e) {
 	var $addedToCartMessage = $('.cart-message');
 	var $promoLabels = $('.promo-labels div');
 	var $panelToggle = $('.panel-toggle');
-	var $accordionToggle = $('.accordion .panel-heading a');
+    var $accordionToggle = $('.accordion .panel-heading a');
 	//var $anasayfaLink = $('#anasayfaLink');
 	//var $markalarimizLink = $('#markalarimizLink');
 	//var $hakkimizdaLink = $('#hakkimizdaLink');
@@ -224,14 +228,28 @@ $(document).ready(function(e) {
 	$subscrForm.validate();
 	$nextField.click(function(e){
 		var $target = $(this).parent();
-			if($subscrForm.valid() === true){
+        if ($subscrForm.valid() === true) {    
+
 				$target.hide('drop', 300, function(){
 					$target.next().show('drop', 300);
 				});
 			}
 		e.preventDefault();
-	});
-	
+    });    
+
+    $subscrSubmit.click(function (e) {
+        console.log("asd");
+        var $target = $(this).parent();
+        if ($subscrForm.valid() === true) {
+
+            $target.hide('drop', 300, function () {
+                $target.next().show('drop', 300);
+            });
+        }
+        e.preventDefault();
+    });
+
+
 	/*Custom Style Checkboxes and Radios
 	*******************************************/
 	$('input').iCheck({
@@ -605,9 +623,9 @@ $(document).ready(function(e) {
 				if (target.length) {
 					// Only prevent default if animation is actually gonna happen
 					event.preventDefault();
-					$('html, body').animate({
-						scrollTop: target.offset().top
-					}, 1000, function () {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 71
+                    }, { duration: 1000, easing: "easeOutExpo" }, function () {
 						// Callback after animation
 						// Must change focus!
 						var $target = $(target);

@@ -26,8 +26,8 @@
 </head>
 
 <!--Body-->
-<body id="bodyAnchor"  class="parallax"><!--Add this class if you have elements on the page with parallax backgrounds-->
-
+<body id="bodyAnchor" class="parallax">
+    <!--Add this class if you have elements on the page with parallax backgrounds-->
     <!--Login Modal-->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -83,23 +83,7 @@
         <div class="right-bg"></div>
 
         <div class="container">
-            <a class="logo" href="/">
-                @*<img src="/Content/img/logo.png" alt="Bushido" />*@
-                @*<img src="~/Content/nildeniz/nillogo.png" />*@
-                @*<img src="~/Content/nildeniz/Firefox-logo.svg_.png" />*@
-                @*<img src="~/Content/nildeniz/DOGA-SIGORTA.png" />*@
-                @*<img src="~/Content/nildeniz/skype.png" />*@
-                @*<img src="~/Content/nildeniz/Burger-King-Logo-e1456502313833.png" />*@
-                @*<img src="~/Content/nildeniz/skecBig.png" />*@
-                @*<img src="~/Content/nildeniz/oie_eAengeNvMdrj.png" />*@
-                @*<img src="~/Content/nildeniz/oie_eAengeNvMdrj.png" />*@
-                <img src="~/Content/aytac/aytaclogo.png" />
-                @*<p style="font-size:25px">
-            BURAYA UYGUN BOYUTLARDA
-            LOGO EKLENMESİ GEREKECEK
-        </p>*@
-            </a>
-
+            <a class="logo  hide-sm" href="index.html"><img src="~/Content/aytac/aytaclogo.png" alt="Aytaç Bebe" /></a>
             <!--Mobile Menu Toggle-->
             <div class="menu-toggle"><i class="fa fa-list"></i></div>
             <div class="mobile-border"><span></span></div>
@@ -107,51 +91,41 @@
             <!--Main Menu-->
             <nav class="menu">
                 <ul class="main">
-                    <li class="has-submenu">
-                        <a  href="#bodyAnchor">Anasayfa<i class="fa fa-chevron-down"></i></a><!--Class "has-submenu" for proper highlighting and dropdown-->
-                    </li>
-                    <li class="has-submenu">
-                        @*<a href="@Url.Action("Markalarimiz", "Home")">Markalarımız<i class="fa fa-chevron-down"></i></a>*@
-                        <a href="#markalarimizAnchor">Markalarımız<i class="fa fa-chevron-down"></i></a>
-                    </li>
-                    <li class="has-submenu">
-                        @*<a href="@Url.Action("Hakkimizda","Home")">Hakkımızda<i class="fa fa-chevron-down"></i></a>*@
-                        <a href="#hakkimizdaAnchor">Hakkımızda<i class="fa fa-chevron-down"></i></a>
-                    </li>
-                    @*<li class="hide-sm"><a href="@Url.Action("Iletisim", "Home")">İletişim</a></li>*@
-                    <li class="hide-sm"><a  href="#iletisimAnchor">İletişim</a></li>
+                    <li class="has-submenu"><a href="#bodyAnchor">Anasayfa<i class="fa fa-chevron-down"></i></a></li>
+                    <li class="has-submenu"><a href="#markalarimizAnchor">Markalarımız<i class="fa fa-chevron-down"></i></a></li>
+                    <li class="has-submenu"><a href="#hakkimizdaAnchor">Hakkımızda<i class="fa fa-chevron-down"></i></a></li>
+                    <li class="has-submenu"><a href="#iletisimAnchor">İletişim</a></li>
                 </ul>
-                @*<ul class="catalog">
-                    <li class="has-submenu"><a href="javascript:void(0);">Baby2Go<i class="fa fa-chevron-down"></i></a></li>
-                    <li><a href="javascript:void(0);">Formula</a></li>
-                    <li><a href="javascript:void(0);">Bübchen</a></li>
-                    <li><a href="javascript:void(0);">Nûby</a></li>
-                </ul>*@
+                <ul class="catalog">
+                    <li><a href="javascript:void();"><i class="fa fa-envelope"></i>&nbsp;info@aytacbebe.com</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-phone"></i>&nbsp;+90 (212) 324 98 00</a></li>
+                </ul>
             </nav>
         </div>
     </header><!--Header Close-->
+
     @RenderBody()
     <!--Sticky Buttons-->
     <div class="sticky-btns">
-        <form class="quick-contact ajax-form" method="post" name="quick-contact">
-            <h3>Contact us</h3>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+        <form class="quick-contact ajax-form" action="" method="post" name="quick-contact">
+            <h3>İletişim</h3>
+            <p class="text-muted">Firmamız hakkında görüş ve önerilerinizi bize gönderin</p>
             <div class="form-group">
-                <label for="qc-name">Full name</label>
-                <input class="form-control input-sm" type="text" name="name" id="qc-name" placeholder="Enter full name">
+                <label for="qc-name">Adınız ve Soyadınız</label>
+                <input class="form-control input-sm" type="text" name="name" id="qc-name" placeholder="Adınız ve Soyadınız">
             </div>
             <div class="form-group">
-                <label for="qc-email">Email</label>
-                <input class="form-control input-sm" type="email" name="email" id="qc-email" placeholder="Enter email">
+                <label for="qc-email">E-posta Adresiniz</label>
+                <input class="form-control input-sm" type="email" name="email" id="qc-email" placeholder="E-posta Adresiniz">
             </div>
             <div class="form-group">
-                <label for="qc-message">Your message</label>
-                <textarea class="form-control input-sm" name="message" id="qc-message" placeholder="Enter your message"></textarea>
+                <label for="qc-message">Mesajınız</label>
+                <textarea class="form-control input-sm" name="message" id="qc-message" placeholder="Mesajınız"></textarea>
             </div>
             <!-- Validation Response -->
             <div class="response-holder"></div>
             <!-- Response End -->
-            <input class="btn btn-success btn-sm btn-block" type="submit" value="Send">
+            <input class="btn btn-success btn-sm btn-block" type="submit" value="Gönder">
         </form>
         <span id="qcf-btn"><i class="fa fa-envelope"></i></span>
         <span id="scrollTop-btn"><i class="fa fa-chevron-up"></i></span>
@@ -166,31 +140,36 @@
                     <!--Mail Chimp Subscription Form-->
                     <form class="subscr-form" role="form" action="//8guild.us3.list-manage.com/subscribe/post?u=168a366a98d3248fbc35c0b67&amp;id=d704057a31" target="_blank" method="post" autocomplete="off">
                         <div class="form-group">
-                            <label class="sr-only" for="subscr-name">Adını Girin</label>
-                            <input type="text" class="form-control" name="FNAME" id="subscr-name" placeholder="Adınızı Girin" required>
+                            <label class="sr-only" for="subscr-name">Adınızı ve Soyadınızı Giriniz</label>
+                            <input type="text" class="form-control" name="FNAME" id="subscr-name" placeholder="Adınızı ve Soyadınızı Giriniz" required>
                             <button class="subscr-next"><i class="icon-arrow-right"></i></button>
                         </div>
                         <div class="form-group fff" style="display: none">
-                            <label class="sr-only" for="subscr-email">Enter email</label>
-                            <input type="email" class="form-control" name="EMAIL" id="subscr-email" placeholder="Eposta Adresi girin" required>
+                            <label class="sr-only" for="subscr-email">E-posta Adresi giriniz</label>
+                            <input type="email" class="form-control" name="EMAIL" id="subscr-email" placeholder="E-posta Adresi giriniz" required>
                             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                             <div style="position: absolute; left: -5000px;"><input type="text" name="b_168a366a98d3248fbc35c0b67_d704057a31" tabindex="-1" value=""></div>
-                            <button type="submit" id="subscr-submit"><i class="icon-check"></i></button>
+                            <button type="button" id="subscr-submit"><i class="icon-check"></i></button>
+                        </div>
+                        <div class="form-group" style="display: none">
+                            <h3 class="light-color">Aboneliğiniz Gerçekleşti</h3>
                         </div>
                     </form>
                     <!--Mail Chimp Subscription Form Close-->
-                    <p class="p-style2">Devam etmek için bilgileri giriniz</p>
+                    @*<p class="p-style2">Please fill the field before continuing</p>*@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-lg-offset-1">
                     <p class="p-style3">
-Yeni ürünlerimizden haberdar olmak ve firmamızın faaliyetlerininden bilgi olmak için kayıt yaptırabilirsiniz.                  
+                        Yeni ürünlerimizden haberdar olmak ve firmamızın faaliyetlerininden bilgi olmak için kayıt yaptırabilirsiniz.
                     </p>
                 </div>
             </div>
         </div>
     </section><!--Subscription Widget Close-->
+
+
     <!--Footer-->
-    <footer  class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-5 col-sm-5">
@@ -207,7 +186,9 @@ Yeni ürünlerimizden haberdar olmak ve firmamızın faaliyetlerininden bilgi ol
                                 LOGO EKLENMESİ GEREKECEK
                             </p>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                        <p>
+                            Firmamız 1960’lı yılların başında işe başlamış ve bugüne kadar tüketicinin taleplerine cevap verecek ürünleri geliştirmek için 50 yıllık tecrübe ve deneyimini üretimine yansıtarak hem satiş öncesi,hem satış sonrası hizmetiyle bulunduğu konumu hak etmeyi bir anlayış haline getirmiştir
+                        </p>
                         <div class="social">
                             <a href="javascipt:void()"><i class="fa fa-instagram"></i></a>
                             <a href="javascipt:void()"><i class="fa fa-youtube-square"></i></a>
@@ -217,23 +198,23 @@ Yeni ürünlerimizden haberdar olmak ve firmamızın faaliyetlerininden bilgi ol
                             <a href="javascipt:void()"><i class="fa fa-facebook-square"></i></a>
 
                             @*target="_blank"
-                            target="_blank"
-                            target="_blank"
-                            target="_blank"
-                            target="_blank"
-                            target="_blank"*@
+                                target="_blank"
+                                target="_blank"
+                                target="_blank"
+                                target="_blank"
+                                target="_blank"*@
 
 
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4">
-                    <h2>Firma İçin Önemli Tarihler</h2>
+                    <h2>Önemli Günler ve Tarihler</h2>
                     <ul class="list-unstyled">
                         <li>03 Ocak <a href="#">Çocuk gereçleri fuarı</a></li>
                         <li>01 Mart <a href="#">Expo İzmir</a></li>
                         @*<li>16 Apr <a href="#">Lorem ipsum dolor sit amet</a></li>
-                        <li>10 Jan <a href="#">Sed ut perspiciatis unde</a></li>*@
+                            <li>10 Jan <a href="#">Sed ut perspiciatis unde</a></li>*@
                     </ul>
                 </div>
                 <div class="contacts col-lg-3 col-md-3 col-sm-3">
@@ -242,7 +223,7 @@ Yeni ürünlerimizden haberdar olmak ve firmamızın faaliyetlerininden bilgi ol
                         4120 Lenox Avenue, New York, NY,<br />
                         10035 76 Saint Nicholas Avenue<br />
                         <a href="mailto:mail@bushido.com">mail@bushido.com</a><br />
-                        +48 543765234<br />
+                        +48 543 76 5234<br />
                         +48 555 234 54 34<br />
                     </p>
                 </div>
@@ -254,14 +235,14 @@ Yeni ürünlerimizden haberdar olmak ve firmamızın faaliyetlerininden bilgi ol
                         <p>&copy; 2018 XCross Bilişim Teknolojileri & Yazılım Çözümleri </p>
                     </div>
                     @*<div class="col-lg-5 col-md-5 col-sm-5">
-                        <div class="payment">
-                            <img src="/Content/img/payment/visa.png" alt="Visa" />
-                            <img src="/Content/img/payment/paypal.png" alt="PayPal" />
-                            <img src="/Content/img/payment/master.png" alt="Master Card" />
-                            <img src="/Content/img/payment/discover.png" alt="Discover" />
-                            <img src="/Content/img/payment/amazon.png" alt="Amazon" />
-                        </div>
-                    </div>*@
+                            <div class="payment">
+                                <img src="/Content/img/payment/visa.png" alt="Visa" />
+                                <img src="/Content/img/payment/paypal.png" alt="PayPal" />
+                                <img src="/Content/img/payment/master.png" alt="Master Card" />
+                                <img src="/Content/img/payment/discover.png" alt="Discover" />
+                                <img src="/Content/img/payment/amazon.png" alt="Amazon" />
+                            </div>
+                        </div>*@
                 </div>
             </div>
         </div>
